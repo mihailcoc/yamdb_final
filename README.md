@@ -26,8 +26,8 @@ python3 -m venv env
 ```
 
 ```
-. env/bin/activate 
-source env/Scripts/activate 
+. venv/bin/activate 
+source venv/Scripts/activate 
 ```
 
 ```
@@ -51,7 +51,15 @@ python3 manage.py makemigrations
 python3 manage.py migrate auth
 python3 manage.py migrate
 ```
+Запустить проверку тестами:
 
+```
+cd ..
+cd tests
+pytest
+```
+
+```
 Запустить проект:
 
 ```
