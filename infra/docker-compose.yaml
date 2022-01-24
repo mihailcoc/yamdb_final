@@ -4,8 +4,7 @@ services:
 
   db:
 
-    image: rozamundpike/yamdb_final:yamdb_final
-    #  image: postgres:13.0-alpine
+    image: postgres:13.0-alpine
 
     volumes:
       - /var/lib/postgresql/data/
@@ -14,7 +13,7 @@ services:
       - ./.env
   web:
     build:
-      context: ../api_yamdb
+      context: rozamundpike/yamdb_final:yamdb_final
     restart: always
     volumes:
        - static_value:/app/static/

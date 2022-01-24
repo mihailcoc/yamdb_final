@@ -139,4 +139,4 @@ sudo docker login --username rozamundpike
 sudo docker tag bd9 rozamundpike/infra_sp2:infra_sp2
 sudo docker push rozamundpike/infra_sp2:infra_sp2
 ```
-![example event parameter]https://github.com/mihailcoc/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+![62.84.113.1]https://github.com/mihailcoc/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
