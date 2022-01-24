@@ -12,8 +12,7 @@ services:
     env_file:
       - ./.env
   web:
-    build:
-      context: rozamundpike/yamdb_final:yamdb_final
+    image: rozamundpike/yamdb_final:yamdb_final
     restart: always
     volumes:
        - static_value:/app/static/
