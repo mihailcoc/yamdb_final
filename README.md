@@ -45,6 +45,16 @@ pip install wheel
 pip install pillow
 pip install -r requirements.txt
 ```
+Чтобы запустить проект без Docker необходимо:
+в файле  infra/.env
+указать localhost и открыть контейнеры бд наружу
+через директиву ports. Пробросить нужно 5432 порт
+в файте docker-compose.
+Чтобы запустить проект внутри бекэнд контейнера
+нужно указывать db в файле  infra/.env.
+и указать порты 8000:8000 в файте docker-compose.
+
+```
 Выполнить миграции:
 
 ```
@@ -95,7 +105,8 @@ sudo docker-compose up -d --build
 ```
 Создать контейнер.
 ```
-sudo docker build -t yamdb . 
+cd api_yamdb
+sudo docker build -t yamdb_final . 
 ```
 Посмотреть  image  контейнеров.
 ```
@@ -146,7 +157,9 @@ sudo docker login --username rozamundpike
 ```
 Присвоить tag к image и отправить image на Dockerhub.
 ```
-sudo docker tag bd9 rozamundpike/infra_sp2:infra_sp2
-sudo docker push rozamundpike/infra_sp2:infra_sp2
+cd api_yamdb
+sudo docker image ls
+sudo docker tag 5bd rozamundpike/yamdb_final:latest
+sudo docker push rozamundpike/yamdb_final:latest
 ```
 ![62.84.113.1]https://github.com/mihailcoc/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
