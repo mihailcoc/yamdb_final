@@ -157,7 +157,7 @@ sudo docker login --username rozamundpike
 ```
 Присвоить tag к image и отправить image на Dockerhub.
 ```
-cd api_yamdbs
+cd api_yamdb
 sudo docker image ls
 sudo docker tag 5bd rozamundpike/yamdb_final:latest
 sudo docker push rozamundpike/yamdb_final:latest
