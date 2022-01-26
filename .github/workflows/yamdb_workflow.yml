@@ -57,7 +57,7 @@ jobs:
           push: true
           tags: rozamundpike/yamdb_final:latest
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latests
     needs: build_and_push_to_docker_hub
     if: github.ref == 'refs/heads/main'
     steps:
